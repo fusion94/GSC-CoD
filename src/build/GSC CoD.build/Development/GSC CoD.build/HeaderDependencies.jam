@@ -1,0 +1,29 @@
+rule DefineHeaderDependencies
+{
+	INCLUDES "$(PROJECT_DIR)/LaunchController.mm" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/LaunchController.h" ;
+	INCLUDES "$(PROJECT_DIR)/LaunchController.mm" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/MainController.h" ;
+	INCLUDES "$(PROJECT_DIR)/LaunchController.mm" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/DocController.h" ;
+	INCLUDES "$(PROJECT_DIR)/LaunchController.mm" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/PracticalSocket.h" ;
+	INCLUDES "$(PROJECT_DIR)/LaunchController.mm" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/define.h" ;
+	INCLUDES "$(PROJECT_DIR)/LaunchController.mm" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/messages.h" ;
+	INCLUDES "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/DocController.h" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/LaunchController.h" ;
+	INCLUDES "$(PROJECT_DIR)/MainController.m" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/MainController.h" ;
+	INCLUDES "$(PROJECT_DIR)/MainController.m" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/define.h" ;
+	INCLUDES "$(PROJECT_DIR)/MainController.m" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/messages.h" ;
+	INCLUDES "$(PROJECT_DIR)/DocController.m" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/DocController.h" ;
+	INCLUDES "$(PROJECT_DIR)/DocController.m" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/LaunchController.h" ;
+	INCLUDES "$(PROJECT_DIR)/DocController.m" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/MainController.h" ;
+	INCLUDES "$(PROJECT_DIR)/DocController.m" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/define.h" ;
+	INCLUDES "$(PROJECT_DIR)/DocController.m" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/messages.h" ;
+	INCLUDES "$(PROJECT_DIR)/PracticalSocket.cpp" : "/Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/PracticalSocket.h" ;
+	INCLUDES "$(PROJECT_DIR)/PracticalSocket.cpp" : "/usr/include/sys/types.h" ;
+	INCLUDES "$(PROJECT_DIR)/PracticalSocket.cpp" : "/usr/include/sys/socket.h" ;
+	INCLUDES "$(PROJECT_DIR)/PracticalSocket.cpp" : "/usr/include/netdb.h" ;
+	INCLUDES "$(PROJECT_DIR)/PracticalSocket.cpp" : "/usr/include/arpa/inet.h" ;
+	INCLUDES "$(PROJECT_DIR)/PracticalSocket.cpp" : "/usr/include/unistd.h" ;
+	INCLUDES "$(PROJECT_DIR)/PracticalSocket.cpp" : "/usr/include/netinet/in.h" ;
+	INCLUDES "$(PROJECT_DIR)/PracticalSocket.cpp" : "/usr/include/errno.h" ;
+}
+
+DefineHeaderDependencies "<GSC CoD>GSC CoD.app" ;
+

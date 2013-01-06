@@ -1,0 +1,156 @@
+# Jamfile for configuration Development of target "GSC CoD" of project "GSC CoD"
+
+
+JAVAC_SOURCE_FILE_ENCODING default = MacRoman ;
+
+# Implicitly computed project-wide settings for project "GSC CoD"
+export deferred ANTICIPATED_BUILT_PRODUCTS_DIR = $(CONFIGURATION_BUILD_DIR) ;
+export deferred ANTICIPATED_TARGET_BUILD_DIR = $(CONFIGURATION_BUILD_DIR) ;
+export deferred BUILD_STYLE = "$(CONFIGURATION)" ;
+export deferred CONFIGURATION = Development ;
+export deferred CONFIGURATION_BUILD_DIR = $(BUILD_DIR)/$(CONFIGURATION) ;
+export deferred CONFIGURATION_TEMP_DIR = $(PROJECT_TEMP_DIR)/$(CONFIGURATION) ;
+export deferred DEVELOPMENT_LANGUAGE = English ;
+export deferred GROUP = fusion94 ;
+export deferred PROJECT = $(PROJECT_NAME) ;
+export deferred PROJECT_DIR = /Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD ;
+export deferred PROJECT_FILE_PATH = /Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD/GSC CoD.xcodeproj ;
+export deferred PROJECT_NAME = "GSC CoD" ;
+export deferred PROJECT_TEMP_DIR = $(OBJROOT)/$(PROJECT_NAME).build ;
+export deferred SRCROOT = /Users/fusion94/Projects/GSC/GSC Call of Duty/GSC CoD ;
+export deferred TARGET_TEMP_DIR = $(CONFIGURATION_TEMP_DIR)/$(TARGET_NAME).build ;
+export deferred TEMP_DIR = $(TARGET_TEMP_DIR) ;
+export deferred USER = fusion94 ;
+
+# Project-wide settings for project "GSC CoD"
+export deferred ARCHS = ppc i386 ;
+export deferred MACOSX_DEPLOYMENT_TARGET = 10.3 ;
+export deferred SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk ;
+
+# User-defined project-wide settings for project "GSC CoD"
+
+# Build Settings for target "GSC CoD"
+
+export deferred _INFO_PLIST_FILE_PATH = "$(TARGET_TEMP_DIR)/Info.plist" ;
+export deferred _PKGINFO_FILE_PATH = "$(TARGET_TEMP_DIR)/PkgInfo" ;
+export deferred _PBDEVELOPMENT_PLIST_FILE_PATH = "$(TARGET_TEMP_DIR)/pbdevelopment.plist" ;
+
+# Implicitly computed build settings for target "GSC CoD"
+export deferred CLONE_HEADERS = NO ;
+export deferred PFE_FILE_C_DIALECTS = objective-c c++ objective-c++ ;
+export deferred TARGETNAME = $(TARGET_NAME) ;
+export deferred TARGET_NAME = "GSC CoD" ;
+
+# User-defined build settings for target "GSC CoD"
+export deferred COPY_PHASE_STRIP = NO ;
+export deferred DEBUGGING_SYMBOLS = NO ;
+export deferred FRAMEWORK_SEARCH_PATHS =  ;
+export deferred GCC_DYNAMIC_NO_PIC = NO ;
+export deferred GCC_ENABLE_FIX_AND_CONTINUE = YES ;
+export deferred GCC_GENERATE_DEBUGGING_SYMBOLS = YES ;
+export deferred GCC_OPTIMIZATION_LEVEL = 0 ;
+export deferred HEADER_SEARCH_PATHS =  ;
+export deferred INSTALL_PATH = "$(HOME)/Applications" ;
+export deferred LIBRARY_SEARCH_PATHS =  ;
+export deferred OPTIMIZATION_CFLAGS = -O0 ;
+export deferred OTHER_CFLAGS =  ;
+export deferred OTHER_LDFLAGS =  ;
+export deferred PRODUCT_NAME = "GSC CoD" ;
+export deferred REZ_EXECUTABLE = YES ;
+export deferred SECTORDER_FLAGS =  ;
+export deferred WARNING_CFLAGS = -Wmost -Wno-four-char-constants -Wno-unknown-pragmas ;
+export deferred WRAPPER_EXTENSION = app ;
+export deferred ZERO_LINK = YES ;
+
+# Target "GSC CoD"
+
+ConditionalDefinitions _ ;
+commitdeferred ;
+
+
+BeginApplication "<GSC CoD>GSC CoD.app" ;
+
+# Copy Files
+COPY_FILES =
+	button_donate.gif
+	button_doneer.gif ;
+COPYFILES_DESTINATION_PATH = "$(TARGET_BUILD_DIR)/GSC CoD.app/Contents/Resources" ;
+ProcessCopyFiles "<GSC CoD>GSC CoD.app" : "$(COPY_FILES)" : "" : BPTag000 ;
+
+# Resources
+English.lproj/MainMenu.nib_REGION = English ;
+English.lproj/InfoPlist.strings_REGION = English ;
+RESOURCES =
+	gsc_logo_cod.gif
+	gsccod_doc.icns
+	gsccod_app.icns
+	badge_over_40.gif
+	badge1.gif
+	badge2.gif
+	badge3.gif
+	badge4.gif
+	badge5.gif
+	badge6.gif
+	badge7.gif
+	badge8.gif
+	badge9.gif
+	badge10.gif
+	badge11.gif
+	badge12.gif
+	badge13.gif
+	badge14.gif
+	badge15.gif
+	badge16.gif
+	badge17.gif
+	badge18.gif
+	badge19.gif
+	badge20.gif
+	badge21.gif
+	badge22.gif
+	badge23.gif
+	badge24.gif
+	badge25.gif
+	badge26.gif
+	badge27.gif
+	badge28.gif
+	badge29.gif
+	badge30.gif
+	badge31.gif
+	badge32.gif
+	badge33.gif
+	badge34.gif
+	badge35.gif
+	badge36.gif
+	badge37.gif
+	badge38.gif
+	badge39.gif
+	badge40.gif
+	English.lproj/MainMenu.nib
+	English.lproj/InfoPlist.strings
+	button_up.gif
+	button_down.gif
+	unzip
+	donate_button_widgets_www.gif ;
+ProcessResources "<GSC CoD>GSC CoD.app" : "$(RESOURCES)" : BPTag000 : BPTag001 ;
+
+# Sources
+main.m_ATTRIBUTES = ;
+SOURCES =
+	main.m
+	LaunchController.mm
+	MainController.m
+	DocController.m
+	PracticalSocket.cpp ;
+ProcessSources "<GSC CoD>GSC CoD.app" : "$(SOURCES)" : BPTag001 : BPTag002 ;
+
+# Frameworks & Libraries
+/System/Library/Frameworks/Cocoa.framework_ATTRIBUTES = AbsolutePath ;
+/System/Library/Frameworks/ApplicationServices.framework_ATTRIBUTES = AbsolutePath ;
+FRAMEWORKS_AND_LIBRARIES =
+	/System/Library/Frameworks/Cocoa.framework
+	/System/Library/Frameworks/ApplicationServices.framework ;
+ProcessFrameworksAndLibraries "<GSC CoD>GSC CoD.app" : "$(FRAMEWORKS_AND_LIBRARIES)" : BPTag002 : BPTag003 ;
+
+include $(TEMP_DIR)/HeaderDependencies.jam ;
+EndApplication "<GSC CoD>GSC CoD.app" ;
+
